@@ -123,7 +123,7 @@ class SimpleCudaTest extends FlatSpec with Matchers {
 
   "SimpleCuda" should "load a serialized model" in {
     lazy val model: ComputationGraph = ModelSerializer
-      .restoreComputationGraph(getClass.getClassLoader.getResourceAsStream("rasar.zip"),false)
+      .restoreComputationGraph(getClass.getClassLoader.getResourceAsStream("random.zip"),false)
     println(model.layerSize(0))
   }
 }

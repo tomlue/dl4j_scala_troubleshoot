@@ -1,4 +1,4 @@
-package simplecuda
+package com.simplecuda
 
 import java.io.{File, FileInputStream, ObjectInputStream}
 
@@ -24,7 +24,8 @@ import org.nd4j.linalg.factory.Nd4j
 import org.nd4j.linalg.learning.config.Sgd
 import org.nd4j.linalg.lossfunctions.LossFunctions
 
-object main extends App{
+object Main extends App{
+
 	val recordReader = new CSVRecordReader(0,",")
     recordReader.initialize(new FileSplit(new ClassPathResource("iris.txt").getFile()))
 
@@ -80,4 +81,5 @@ object main extends App{
     val output = model.output(testData.getFeatures())
     eval.eval(testData.getLabels(), output)
     println(eval.stats())
+
 }
