@@ -1,5 +1,8 @@
+
 This problem was resolved at https://github.com/deeplearning4j/deeplearning4j-docs/issues/127
-============
+
+--------------
+
 Run the following to get no-backend error
 
 1. sbt assembly
